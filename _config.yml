@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: The BIM Coder
+title: 13筆記
 subtitle:
 description:
-author: Eason Kang
+author: 康益昇
 email:
 language:
 timezone:
@@ -59,9 +59,9 @@ time_format: HH:mm:ss
 # ## 2: Enable pagination
 # ## 1: Disable pagination
 # ## 0: Fully Disable
-archive: 2
-category: 2
-tag: 2
+archive: 1
+category: 1
+tag: 1
 
 # Pagination
 ## Set per_page to 0 to disable pagination
