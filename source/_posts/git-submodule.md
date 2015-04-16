@@ -7,7 +7,7 @@ tags:
 ---
 
 ### 簡介
-最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需整個 repository 都 clone 下來，可是整 clone 下來還要把想要的檔案分別丟到對的位置，可是這樣好像太麻煩了，還好 git 有提供 submodule 這個機制來做外部資源參考與更新，解救了我這個懶人～～～
+最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需整個 repository 都 clone 下來，可是整個 clone 下來還要把想要的檔案分別丟到對的位置，這樣好像太麻煩了，還好 git 有提供 submodule 這個機制可以用來做外部資源參考與更新，解救了我這個懶人～～～ XD
 
 ### 新增 submodule
 指令：
@@ -53,6 +53,13 @@ git commit -m "Add submodule pure theme"
 ```
 
 ### 更新 submodule
+每個 submodule 獨自更新：
+```bash
+cd {module folder}
+git pull origin master
+```
+
+但我很懶的，都用這個直接更新整個專案的 submodule
 ```bash
 git submodule foreach git pull
 ```
@@ -70,3 +77,6 @@ git submodule init
 ```bash
 git submodule update
 ```
+
+### 移除 submodule
+待補
