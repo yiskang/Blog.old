@@ -79,4 +79,36 @@ git submodule update
 ```
 
 ### 移除 submodule
-待補
+如果不要想使用某個 submodule 了，要移除它要怎麼做呢？我們可以透過下面的步驟將它移除，但在移除前還有一些動作要做！移除 submodule 時得告訴 git 你要移除的 module 名稱，這名稱要去哪找？透過 .gitmodules 就可以啦，在新增 submodule 時，git就將它記錄在 .gitmodules 裡了。那假設現在要移除 pure theme module，我們可以在 .gitmodules 找到這樣的描述：
+```bash
+[submodule "theme/pure"]
+      path = theme/pure
+      url = https://github.com/yiskang/hexo-theme-pure.git
+```
+module 明稱就是上面的 path，現在要移除 pure theme module，所以就是 theme/pure。 接著就可以開始進行移除了，移除 submodule 的命令就是：
+```bash
+git submodule deinit {path/folder name}
+git rm {path/folder name}     or  git rm --chched {path/folder name}
+```
+現在要將 pure theme module 移除，將上面的 {path/folder name} 換成 theme/pure：
+```bash
+# 先移除 submodule 裡面的內容
+git submodule deinit theme/pure
+# 移除資料夾
+git rm theme/pure
+# 或者你不想留下先前的修改記錄，要將它從 Woking Tree 移除
+git rm --cached theme/pure
+```
+移除完以後，可以從 git status 看到：
+```bash
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+      modified:   .gitmodules
+      deleted:    theme/pure
+```
+最後記得 commit：
+```bash
+git add -A
+git commit -m "Remove submodule pure theme"
+```
