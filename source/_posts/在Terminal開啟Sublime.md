@@ -1,5 +1,8 @@
 title: "在 Terminal 開啟 Sublime"
 date: 2015-04-29 17:14:54
+categories:
+- Tech
+- OS X
 tags:
 - Hexo
 ---
