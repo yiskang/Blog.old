@@ -24,3 +24,5 @@ alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/sub
 $ echo 'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"' > ~/.zshrc
 $ source ~/.zshrc
 ```
+
+Reference: [在 Terminal 啟動 Sublime Text](http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/)
