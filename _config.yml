@@ -6,7 +6,7 @@
 title: 13筆記
 subtitle:
 description:
-author: 康益昇
+author: Eason Kang
 email: M9805508@mail.ntust.edu.tw
 language:
 timezone:
@@ -81,6 +81,7 @@ theme: pure
 plugins:
 - Hexo-renderer-jade
 - hexo-generator-feed
+- hexo-generator-sitemap
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
